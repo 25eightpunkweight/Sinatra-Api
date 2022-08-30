@@ -1,0 +1,27 @@
+=== puma startup: 2022-08-30 07:05:09 +0000 ===
+bundler: failed to load command: puma (/usr/local/bundle/bin/puma)
+/usr/local/bundle/gems/puma-5.6.5/lib/puma/launcher.rb:259:in `write': No such file or directory @ rb_sysopen - /app/tmp/pids/puma.pid (Errno::ENOENT)
+	from /usr/local/bundle/gems/puma-5.6.5/lib/puma/launcher.rb:259:in `write_pid'
+	from /usr/local/bundle/gems/puma-5.6.5/lib/puma/launcher.rb:112:in `write_state'
+	from /usr/local/bundle/gems/puma-5.6.5/lib/puma/cluster.rb:406:in `run'
+	from /usr/local/bundle/gems/puma-5.6.5/lib/puma/launcher.rb:193:in `run'
+	from /usr/local/bundle/gems/puma-5.6.5/lib/puma/cli.rb:81:in `run'
+	from /usr/local/bundle/gems/puma-5.6.5/bin/puma:10:in `<top (required)>'
+	from /usr/local/bundle/bin/puma:25:in `load'
+	from /usr/local/bundle/bin/puma:25:in `<top (required)>'
+	from /usr/local/lib/ruby/3.1.0/bundler/cli/exec.rb:58:in `load'
+	from /usr/local/lib/ruby/3.1.0/bundler/cli/exec.rb:58:in `kernel_load'
+	from /usr/local/lib/ruby/3.1.0/bundler/cli/exec.rb:23:in `run'
+	from /usr/local/lib/ruby/3.1.0/bundler/cli.rb:484:in `exec'
+	from /usr/local/lib/ruby/3.1.0/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+	from /usr/local/lib/ruby/3.1.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'
+	from /usr/local/lib/ruby/3.1.0/bundler/vendor/thor/lib/thor.rb:392:in `dispatch'
+	from /usr/local/lib/ruby/3.1.0/bundler/cli.rb:31:in `dispatch'
+	from /usr/local/lib/ruby/3.1.0/bundler/vendor/thor/lib/thor/base.rb:485:in `start'
+	from /usr/local/lib/ruby/3.1.0/bundler/cli.rb:25:in `start'
+	from /usr/local/lib/ruby/gems/3.1.0/gems/bundler-2.3.7/libexec/bundle:48:in `block in <top (required)>'
+	from /usr/local/lib/ruby/3.1.0/bundler/friendly_errors.rb:103:in `with_friendly_errors'
+	from /usr/local/lib/ruby/gems/3.1.0/gems/bundler-2.3.7/libexec/bundle:36:in `<top (required)>'
+	from /usr/local/bin/bundle:25:in `load'
+	from /usr/local/bin/bundle:25:in `<main>'
+=== puma startup: 2022-08-30 07:06:00 +0000 ===

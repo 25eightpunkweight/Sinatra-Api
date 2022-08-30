@@ -1,0 +1,8 @@
+=== puma startup: 2022-08-30 07:05:09 +0000 ===
+=== puma startup: 2022-08-30 07:06:00 +0000 ===
+[1] * Starting control server on unix:///tmp/puma-status-1661843160343-1
+[1] - Worker 0 (PID: 11) booted in 0.86s, phase: 0
+[1] - Worker 1 (PID: 13) booted in 0.86s, phase: 0
+[1] === puma shutdown: 2022-08-30 07:06:09 +0000 ===
+[1] - Goodbye!
+[1] - Gracefully shutting down workers...

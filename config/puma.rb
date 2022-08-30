@@ -16,7 +16,7 @@ environment rack_env
 # only bind a sock if it's an app meant to be served via apache.
 # bind "unix://#{shared_dir}/sockets/puma.sock"
 
-if rack_env == 'development'unless true
+if rack_env == 'development'
   stdout_redirect "#{app_dir}/log/puma.stdout.log", "#{app_dir}/log/puma.stderr.log", true
 end
 
