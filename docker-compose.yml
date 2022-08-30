@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  db:
+    image: postgres
+    env_file: ./.env-local-db
+  sinatra-api:
+    build: .
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rackup -C puma.rb"
+    volumes:
+      - .:app
+    ports:
+      - "9292:9292"
+    depends_on:
+      - db
+    env_file: ./.env-local-sinatra-api
+volumes:
+  postgres:
