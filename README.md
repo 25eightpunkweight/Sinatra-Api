@@ -22,6 +22,7 @@ This dockerfile uses a latest image of ruby, and a separate container for the po
 
   * `docker-compose up` starts the sinatra-api and postgres containers (and any other containers you have specified in your `docker-compose.yml` file)
   * `docker-compose up --build` rebuilds the containers first before starting it.
+  * `docker-compose up --detach` Detached mode: Run containers in the background, print new container names. Incompatible with `--abort-on-container-exit`.
   * `docker-compose build` just builds the containers.
   * `docker-compose build --no-cache` builds the containers from scratch.
   * `docker-compose down` stops your containers.
