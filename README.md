@@ -53,7 +53,7 @@ While still inside the container, you can run `rake test` to verify the unit tes
 
 > What if we wanted to offer the same functionality on a REST API? i.e. GET http://localhost:3000/query?q=foo
 
-I've set this sinatra application as a prototype if we want to serve this functionality on a REST API. a sample endpoint for clients is available at `lib/controllers/clients_controller.rb`. If we're working with rails, this would be more robust though. Considerations such as CORS configuration or Pagination should be applied when working on production-ready applications.
+I've set this sinatra application as a prototype if we want to serve this functionality on a REST API. A sample endpoint for clients is available at `lib/controllers/clients_controller.rb`, and a sample model is availabel at `lib/models/client.rb`. If we're working with rails, this would be more robust though. Considerations such as CORS configuration or Pagination should be applied when working on production-ready applications.
 
 > What if we wanted to offer this capability at scale?
 
