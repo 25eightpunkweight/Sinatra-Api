@@ -1,5 +1,10 @@
 class ClientService
 
+  # Assumption: given the clients.json, 
+  # I am assuming that the clients data 
+  # at this point has been converted into 
+  # a ruby hash before being passed to the following methods.
+
   # Criteria 1:
   # Search through all clients and return those with 
   # names/emails partially matching a given search query
