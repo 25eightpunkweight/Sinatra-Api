@@ -94,21 +94,21 @@ class App < Sinatra::Base
 end
 
 # Load up all initializers first (NB)
-Dir[File.dirname(__FILE__) + "config/initializers/*.rb"].each do |file|
+Dir[File.dirname(__FILE__) + "/config/initializers/*.rb"].each do |file|
   require file
 end
 
 # Load up all helpers second (NB)
-Dir[File.dirname(__FILE__) + "lib/helpers/*.rb"].each do |file|
+Dir[File.dirname(__FILE__) + "/lib/helpers/*.rb"].each do |file|
   require file
 end
 
 # Load up all models next
-Dir[File.dirname(__FILE__) + "lib/models/*.rb"].each do |file|
+Dir[File.dirname(__FILE__) + "/lib/models/*.rb"].each do |file|
   require file
 end
 
 # Load up all controllers last
-Dir[File.dirname(__FILE__) + "lib/controllers/*.rb"].each do |file|
+Dir[File.dirname(__FILE__) + "/lib/controllers/*.rb"].each do |file|
   require file
 end

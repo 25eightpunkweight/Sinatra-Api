@@ -39,9 +39,14 @@ gem "config"
 
 
 
-group :development do
+group :development, :test do
   gem "awesome_print", :require => 'ap' # where have you been all my life
   gem "pry" # ol' reliable
+end
+
+group :test do
+  gem "rspec"
+  gem "rack-test"
 end
 
 group :development, :test do

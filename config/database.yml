@@ -1,7 +1,7 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  host: localhost
+  host: db
   username: postgres
   password: postgres
   pool: 5
@@ -11,10 +11,11 @@ development:
     <<: *default
     database: boilerplate_dev_db_CHANGEME
 
-# test:
-#   primary:
-#     <<: *default
-#     database: boilerplate_test_db_CHANGEME
+test:
+  primary:
+    <<: *default
+    adapter: postgresql
+    database: boilerplate_test_db_CHANGEME
 
 # production:
 #   primary:
