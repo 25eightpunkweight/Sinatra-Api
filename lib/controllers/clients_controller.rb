@@ -5,9 +5,8 @@ require 'json'
 class ClientsController < Sinatra::Base
   register Sinatra::ActiveRecordExtension
 
-  # Define the Client model (assuming you have one)
   class Client < ActiveRecord::Base
-    self.table_name = "clients" # Replace with your actual table name
+    self.table_name = "clients"
   end
 
   get '/clients/search' do
