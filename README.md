@@ -29,3 +29,32 @@ This dockerfile uses a latest image of ruby, and a separate container for the po
   * when you have containers up, `docker ps` shows your currently up containers.
   * if you want to access a container's STDOUT, open a separate terminal and enter `docker attach <container name>`
   * if you want to ssh into a container, you can use `docker exec -it <container name> /bin/bash -l`
+
+
+### ShiftCare - Welcome!
+
+You are seeing README as part of a branch on a public repo that I have. Please build and start the docker containers via:
+ 
+ `docker-compose up --build`
+
+From there, you can bash into the container via:
+
+`docker exec -it sinatra-api-sinatra-api-1 /bin/bash -l`
+
+In this branch, I have the class `ClientService` in `lib/helpers/client_service.rb`. I have two methods from the points of criteria you've stated under the task description. Comments are available in the `ClientService` class for more information. Once you're inside the container, you can start a rake console of the app via:
+
+`rake console`
+
+and use the methods `ClientService.search_by_key()` and `ClientService.find_dups()`.
+
+RSpec tests are also available in this branch. The tests I've written for the service object is available at `spec/lib/helpers/client_service_spec.rb`.
+
+While still inside the container, you can run `rake test` to verify the unit tests.
+
+> What if we wanted to offer the same functionality on a REST API? i.e. GET http://localhost:3000/query?q=foo
+
+I've set this sinatra application as a prototype if we want to serve this functionality on a REST API. a sample endpoint for clients is available at `lib/controllers/clients_controller.rb`. If we're working with rails, this would be more robust though. Considerations such as CORS configuration or Pagination should be applied when working on production-ready applications.
+
+> What if we wanted to offer this capability at scale?
+
+Lots to considere here. We can implement database indexes, query and schema optimization, pagination, or even caching.
